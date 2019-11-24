@@ -9,3 +9,7 @@ fn main() {
 	lol.print("Hello V World")
 }
 ```
+
+## Screenshots
+
+![lol_example](assets/lol_example.png)

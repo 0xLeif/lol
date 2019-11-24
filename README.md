@@ -1,5 +1,9 @@
 # lol
 
+## Install
+
+`v install zmeriksen.lol`
+
 ## Example:
 ```
 fn main() {

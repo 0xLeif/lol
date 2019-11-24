@@ -19,6 +19,10 @@ pub struct Lol {
 }
 
 pub fn (l Lol) print(s string) {
+	println(l.string(s))
+}
+
+pub fn (l Lol) string(s string) string {
 	mut output := ""
 	mut freq := 0.1
 	for c in s {
@@ -28,7 +32,7 @@ pub fn (l Lol) print(s string) {
 		}
 		freq += 0.1
 	}
-	println(output)
+	return output
 }
 
 fn normal_color(freq f32, s string) string {

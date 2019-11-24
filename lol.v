@@ -3,18 +3,18 @@ module lol
 import term
 import math
 
-enum Style {
+pub enum Style {
 	normal
 	red
 	blue
 	green
 }
 
-struct Config {
+pub struct Config {
 	style Style
 }
 
-struct Lol {
+pub struct Lol {
 	config Config
 }
 

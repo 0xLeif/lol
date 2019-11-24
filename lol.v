@@ -36,6 +36,7 @@ pub fn (l Lol) string(s string) string {
 }
 
 fn normal_color(freq f32, s string) string {
+	// ACK [jim bumgardner](https://krazydad.com/tutorials/makecolors.php)
     red   := int(math.sin(freq + 0) * 127 + 128)
     green := int(math.sin(freq + 2) * 127 + 128)
     blue  := int(math.sin(freq + 4) * 127 + 128)

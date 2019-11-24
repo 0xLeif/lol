@@ -17,3 +17,7 @@ fn main() {
 ## Screenshots
 
 ![lol_example](assets/lol_example.png)
+
+## Thanks
+
+[jim bumgardner](https://krazydad.com/tutorials/makecolors.php)

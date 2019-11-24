@@ -1,4 +1,4 @@
-//module lol
+module lol
 
 import term
 import math
@@ -37,10 +37,3 @@ fn normal_color(freq f32, s string) string {
     blue  := int(math.sin(freq + 4) * 127 + 128)
 	return term.rgb(red, green, blue, s)
 } 
-
-fn main() {
-	config := Config { Style.normal }
-	lol := Lol { config }
-
-	lol.print("Hello V World")
-}

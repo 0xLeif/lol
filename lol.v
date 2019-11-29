@@ -28,11 +28,29 @@ pub fn (l Lol) string(s string) string {
 	for c in s {
 		output += match l.config.style {
 			.normal { normal_color(freq, c.str()) }
+			.red { red_color(freq, c.str()) }
+			.green { green_color(freq, c.str()) }
+			.blue { blue_color(freq, c.str()) }
 			else { c.str() }
 		}
 		freq += 0.1
 	}
 	return output
+}
+
+fn red_color(freq f32, s string) string {
+	red := int(math.sin(freq) * 127 + 128)
+	return term.rgb(red, 0, 0, s)
+}
+
+fn green_color(freq f32, s string) string {
+	green := int(math.sin(freq) * 127 + 128)
+	return term.rgb(0, green, 0, s)
+}
+
+fn blue_color(freq f32, s string) string {
+	blue := int(math.sin(freq) * 127 + 128)
+	return term.rgb(0, 0, blue, s)
 }
 
 fn normal_color(freq f32, s string) string {
@@ -42,3 +60,4 @@ fn normal_color(freq f32, s string) string {
     blue  := int(math.sin(freq + 4) * 127 + 128)
 	return term.rgb(red, green, blue, s)
 } 
+

@@ -6,10 +6,14 @@
 
 ## Example:
 ```
-fn main() {
-	config := Config { Style.normal }
-	lol := Lol { config }
+import zmeriksen.lol as Lol
 
+fn main() {
+	lol := Lol.Lol{
+		Lol.Config{
+			Lol.Style.normal
+		}
+	}
 	lol.print("Hello V World")
 }
 ```

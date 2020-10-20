@@ -5,7 +5,7 @@
 `v install zmeriksen.lol`
 
 ## Example:
-```
+```V
 import zmeriksen.lol as Lol
 
 fn main() {

@@ -14,15 +14,15 @@ pub struct Config {
 	style Style
 }
 
-pub struct lol {
+pub struct Lol {
 	config Config
 }
 
-pub fn (l lol) print(s string) {
+pub fn (l Lol) print(s string) {
 	println(l.string(s))
 }
 
-pub fn (l lol) string(s string) string {
+pub fn (l Lol) string(s string) string {
 	mut output := ""
 	mut freq := f32(0.1)
 	sl := s.split('')

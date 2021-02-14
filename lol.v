@@ -14,24 +14,24 @@ pub struct Config {
 	style Style
 }
 
-pub struct Lol {
+pub struct lol {
 	config Config
 }
 
-pub fn (l Lol) print(s string) {
+pub fn (l lol) print(s string) {
 	println(l.string(s))
 }
 
-pub fn (l Lol) string(s string) string {
+pub fn (l lol) string(s string) string {
 	mut output := ""
-	mut freq := 0.1
-	for c in s {
+	mut freq := f32(0.1)
+	sl := s.split('')
+	for c in sl {
 		output += match l.config.style {
-			.normal { normal_color(freq, c.str()) }
-			.red { red_color(freq, c.str()) }
-			.green { green_color(freq, c.str()) }
-			.blue { blue_color(freq, c.str()) }
-			else { c.str() }
+			.normal { normal_color(freq, c) }
+			.red { red_color(freq, c) }
+			.green { green_color(freq, c) }
+			.blue { blue_color(freq, c) }
 		}
 		freq += 0.1
 	}
@@ -59,5 +59,6 @@ fn normal_color(freq f32, s string) string {
     green := int(math.sin(freq + 2) * 127 + 128)
     blue  := int(math.sin(freq + 4) * 127 + 128)
 	return term.rgb(red, green, blue, s)
-} 
+}
+
 

@@ -10,8 +10,8 @@ import zmeriksen.lol as Lol
 
 fn main() {
 	lol := Lol.Lol{
-		Lol.Config{
-			Lol.Style.normal
+		lol.Config{
+			lol.Style.normal
 		}
 	}
 	lol.print("Hello V World")

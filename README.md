@@ -6,15 +6,14 @@
 
 ## Example:
 ```V
-import zmeriksen.lol as Lol
+import zmeriksen.lol
 
 fn main() {
-	lol := Lol.Lol{
-		lol.Config{
-			lol.Style.normal
-		}
-	}
-	lol.print("Hello V World")
+	lold := lol.Lol{lol.Config{
+		style: lol.Style.normal
+	}}
+
+	lold.print('Hello V World')
 }
 ```
 
